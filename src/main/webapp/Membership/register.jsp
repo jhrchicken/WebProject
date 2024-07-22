@@ -29,7 +29,6 @@
 	function idCheck(form) {
 		form.action = "../membership/idcheck.do";
 	}
-
 	function validateForm(form) {
 		// 아이디를 입력하지 않은 경우
 		if (!form.id.value) {
@@ -42,10 +41,6 @@
 		if (!regex.test(form.id.value)) {
 			alert("아이디는 영문자와 숫자만 포함되어야 합니다.");
 			form.id.focus();
-			return false;
-		}
-		if (form.check.value) {
-			alert("아이디 중복을 확인해주세요.");
 			return false;
 		}
 		// 비밀번호를 입력하지 않은 경우
@@ -149,7 +144,8 @@
 							</form>
 							<hr>
 							<div class="text-center">
-								<a class="small" href="../membership/forgotpassword.do">비밀번호 찾기</a>
+								<a class="small" href="../membership/forgotpassword.do">비밀번호
+									찾기</a>
 							</div>
 							<div class="text-center">
 								<a class="small" href="../membership/login.do">로그인</a>

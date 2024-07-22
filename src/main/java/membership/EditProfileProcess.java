@@ -22,7 +22,7 @@ public class EditProfileProcess extends HttpServlet {
 			JSFunction.alertLocation(response, "로그인 후 이용해 주세요.", "../membership/login.do");
 			return;
 		}
-		request.getRequestDispatcher("../UIUX/profile.jsp").forward(request, response);
+		request.getRequestDispatcher("../Membership/profile.jsp").forward(request, response);
 	}
 
 	@Override

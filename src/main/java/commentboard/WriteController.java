@@ -50,6 +50,7 @@ public class WriteController extends HttpServlet {
 		String content = request.getParameter("content");
 		String id = request.getParameter("id");
 		int ref = Integer.parseInt(request.getParameter("ref"));
+
 		// 폼값을 DTO에 저장
 		CommentboardDTO dto = new CommentboardDTO();
 		dto.setContent(content);

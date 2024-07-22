@@ -8,6 +8,7 @@ public class FreeboardDTO {
 	private String id;
 	private java.sql.Date postdate;
 	private int visitcount;
+	private int likecount;
 	
 	public int getNum() {
 		return num;
@@ -44,5 +45,11 @@ public class FreeboardDTO {
 	}
 	public void setVisitcount(int visitcount) {
 		this.visitcount = visitcount;
+	}
+	public int getLikecount() {
+		return likecount;
+	}
+	public void setLikecount(int likecount) {
+		this.likecount = likecount;
 	}
 }

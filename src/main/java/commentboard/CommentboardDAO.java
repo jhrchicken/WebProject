@@ -74,7 +74,7 @@ public class CommentboardDAO extends JDBConnect {
 		int result = 0;
 		// 쿼리문 실행
 		try {
-			String query = "INSERT INTO commentboard (num, content, id, ref) VALUES (seq_qnaboard_num.NEXTVAL, ?, ?, ?)";
+			String query = "INSERT INTO commentboard (num, content, id, ref) VALUES (seq_commentboard_num.NEXTVAL, ?, ?, ?)";
 			psmt = con.prepareStatement(query);
 			psmt.setString(1, dto.getContent());
 			psmt.setString(2, dto.getId());

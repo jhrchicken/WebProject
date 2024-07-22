@@ -107,6 +107,7 @@ public class FreeboardDAO extends JDBConnect {
 				dto.setId(rs.getString(4));
 				dto.setPostdate(rs.getDate(5));
 				dto.setVisitcount(rs.getInt(6));
+				dto.setLikecount(rs.getInt(7));
 			}
 		}
 		catch (Exception e) {
@@ -167,9 +168,39 @@ public class FreeboardDAO extends JDBConnect {
 		return result;
 	}
 	
+	// 게시물의 좋아요수 증가 메서드
+	public void updateLikeCount(String num) {
+		String query = "UPDATE freeboard SET likecount=likecount + 1 WHERE num=?";
+		try {
+			psmt = con.prepareStatement(query);
+			psmt.setString(1, num);
+			psmt.executeQuery();
+		}
+		catch (Exception e) {
+			System.out.println("게시물 좋아요 수 증가에 실패했습니다.");
+			e.printStackTrace();
+		}
+	}
 	
-	
-	
+	public int getLikeCount(String num) {
+		int likecount = 0;
+		String query = "SELECT likecount FROM freeboard WHERE num=?";
+		
+		try {
+			psmt = con.prepareStatement(query);
+			psmt.setString(1, num);
+			psmt.executeQuery();
+			rs = psmt.executeQuery();
+			rs.next();
+			likecount = rs.getInt(1);
+		}
+		catch (Exception e) {
+			System.out.println("게시물 좋아요 수 구하기에 실패했습니다.");
+			e.printStackTrace();
+		}		
+		
+		return likecount;
+	}
 	
 	
 	

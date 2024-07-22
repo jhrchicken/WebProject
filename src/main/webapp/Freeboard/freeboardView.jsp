@@ -29,6 +29,25 @@
 <link href="../vendor/datatables/dataTables.bootstrap4.min.css"
 	rel="stylesheet">
 
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $(function() { // 문서가 준비되면 실행되는 함수
+        $('#likeBtn').click(function() { // #likeBtn 요소가 클릭되면 실행되는 함수
+            $.ajax({
+                url: '../freeboard/like.do', // 요청할 URL
+                type: 'get', // 요청의 유형
+                data: { 
+                    num: '${ dto.num }' // 서버로 보낼 데이터
+                },
+                success: function(responseData) { // 요청이 성공했을 때 실행되는 함수
+                    $('#likeDisplay').html(responseData); // #likeDisplay 요소에 응답 데이터를 삽입
+                } // 객체 구문에서는 여기에서 세미콜론을 사용하지 않습니다.
+            });
+        });
+    });
+</script>
+
 </head>
 
 <body id="page-top">
@@ -52,12 +71,13 @@
 				<div class="sidebar-brand-text mx-3">Web Project</div>
 			</a>
 
-			<!-- Divider --> 
+			<!-- Divider -->
 			<hr class="sidebar-divider my-0">
 
 			<!-- Nav Item - Dashboard -->
-			<li class="nav-item active"><a class="nav-link" href="../index.jsp">
-					<i class="fas fa-fw fa-tachometer-alt"></i> <span>메인 페이지</span>
+			<li class="nav-item active"><a class="nav-link"
+				href="../index.jsp"> <i class="fas fa-fw fa-tachometer-alt"></i>
+					<span>메인 페이지</span>
 			</a></li>
 
 			<!-- Divider -->
@@ -248,7 +268,14 @@
 								</tr>
 								<tr>
 									<td colspan="4" align="center">
-										<c:if test="${ dto.id == id }">
+										<div id="likeDisplay">${ dto.likecount }</div>
+										<button id="likeBtn">좋아요</button>
+									</td>
+								</tr>
+								<tr>
+
+									<td colspan="4" align="center"><c:if
+											test="${ dto.id == id }">
 											<button type="button"
 												onclick="location.href='../freeboard/edit.do?num=${ param.num }';">
 												수정하기</button>
