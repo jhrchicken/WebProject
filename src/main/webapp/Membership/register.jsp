@@ -28,6 +28,8 @@
 <script>
 	function idCheck(form) {
 		form.action = "../membership/idcheck.do";
+		form.submit();
+		return false;
 	}
 	function validateForm(form) {
 		// 아이디를 입력하지 않은 경우
@@ -109,7 +111,7 @@
 									</div>
 									<div class="col-sm-6">
 										<button onclick="return idCheck(this.form);"
-											class="btn btn-primary btn-user btn-block">중복확인</button>
+											class="btn btn-primary btn-user btn-block" name="test">중복확인</button>
 									</div>
 								</div>
 								<div class="form-group row">

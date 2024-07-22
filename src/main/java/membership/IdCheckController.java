@@ -16,6 +16,7 @@ public class IdCheckController extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
 		String id = request.getParameter("id");
 		// 아이디 중복여부 확인
 		MemberDAO dao = new MemberDAO();
