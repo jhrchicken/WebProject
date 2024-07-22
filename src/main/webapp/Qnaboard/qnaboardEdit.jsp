@@ -149,6 +149,8 @@
 				<!-- ======================================== Top bar ======================================== -->
 				<nav
 					class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+					
+					<h3 class="m-0 font-weight-bold text-primary">&nbsp;질문게시판</h6>
 
 					<!-- Sidebar Toggle (Topbar) -->
 					<button id="sidebarToggleTop"
@@ -227,8 +229,7 @@
 				<div class="container-fluid">
 
 					<!-- Page Heading -->
-					<h1 class="h3 mb-2 text-gray-800">Q&A</h1>
-					<p class="mb-4">질문게시판에 오신걸 환영합니다. 질문과 답변을 남겨보세요.</p>
+					<p class="mb-4">질문게시판에 오신걸 환영합니다. 질문과 답변을 남겨보세요.</p><br/>
 
 					<!-- DataTales Example -->
 					<div class="card shadow mb-4">

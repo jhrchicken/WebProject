@@ -164,7 +164,9 @@
 				<!-- ======================================== Top bar ======================================== -->
 				<nav
 					class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
+					
+					<h3 class="m-0 font-weight-bold text-primary">&nbsp;프로필</h6>
+					
 					<!-- Sidebar Toggle (Topbar) -->
 					<button id="sidebarToggleTop"
 						class="btn btn-link d-md-none rounded-circle mr-3">

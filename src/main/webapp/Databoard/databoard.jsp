@@ -133,6 +133,8 @@
 				<!-- ======================================== Top bar ======================================== -->
 				<nav
 					class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+					
+					<h3 class="m-0 font-weight-bold text-primary">&nbsp;자료실</h6><br/>
 
 					<!-- Sidebar Toggle (Topbar) -->
 					<button id="sidebarToggleTop"
@@ -211,8 +213,7 @@
 				<div class="container-fluid">
 
 					<!-- Page Heading -->
-					<h1 class="h3 mb-2 text-gray-800">자료실</h1>
-					<p class="mb-4">자료실에 오신 걸 환영합니다. 필요한 자료를 다운로드 하세요.</p>
+					<p class="mb-4">자료실에 오신 걸 환영합니다. 필요한 자료를 다운로드 하세요.</p><br/>
 
 					<!-- DataTales Example -->
 					<div class="card shadow mb-4">
@@ -228,7 +229,7 @@
 										<tr>
 											<td align="center"><select name="searchField">
 													<option value="title">제목</option>
-													<option value="content" >내용</option>
+													<option value="content">내용</option>
 													<option value="name">작성자</option>
 											</select> <input type="text" name="searchWord" /> <input
 												type="submit" value="검색하기" /></td>
