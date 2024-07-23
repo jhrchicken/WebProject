@@ -21,16 +21,14 @@ public class LikeProcess extends HttpServlet {
 		// 파라미터로 전달된 일련번호 받기
 		String num = request.getParameter("num");
 		
-		// 게시물 증가 (쿠키)
+		// 좋아요 수 증가
 		HttpSession sessoin = request.getSession();
 		String id = (String) sessoin.getAttribute("id");
 		if (id != null) {
 			String numStr = CookieManager.readCookie(request, "freeboard-like-"+ id + "-" + num);
-			// 쿠키 없으면 해당 페이지에 처음 방문했다는 것이므로 조회수 증가 및 쿠키 생성
+			// 쿠키 없으면 해당 페이지에 좋아요를 누른 적이 없다는 것이므로 좋아요 수 올리기 및 쿠키 생성
 			if (numStr.equals("")) {
-				// 하루짜리 쿠키를 해당 게시물 번호로 생성 (방문한 흔적 남기기)
 				CookieManager.makeCookie(response, "freeboard-like-"+ id + "-" + num, "freeboard-like-"+ id + "-" + num, 86400);
-				// 게시물 좋아요수 증가
 				freeboarddao.updateLikeCount(num);
 			}
 		}

@@ -212,7 +212,7 @@
 				<div class="container-fluid">
 
 					<!-- Page Heading -->
-					<p class="mb-4">자유게시판에 오신 걸 환영합니다. 자유롭게 글을 남겨보세요.</p><br/>
+					<p class="mb-4">자유게시판은 댓글을 남길 수도, 파일을 첨부할 수도 없는 게시물입니다. 마음에 드는 게시물에 좋아요를 눌러보세요.</p><br/>
 
 					<!-- DataTales Example -->
 					<div class="card shadow mb-4">

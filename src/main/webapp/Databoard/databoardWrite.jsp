@@ -231,7 +231,7 @@
 				<div class="container-fluid">
 
 					<!-- Page Heading -->
-					<p class="mb-4">자료실에 오신 걸 환영합니다. 필요한 자료를 다운로드 하세요.</p><br/>
+					<p class="mb-4">자료실은 파일을 반드시 첨부해야 하는 게시판입니다. 필요한 자료를 다운로드 해보세요.</p><br/>
 
 					<!-- DataTales Example -->
 					<div class="card shadow mb-4">

@@ -45,8 +45,6 @@ public class ForgotPasswordController extends HttpServlet {
 		emailInfo.put("format", "text/plain;charset=UTF-8"); // 포맷
 		
 		emailInfo.put("subject", "비밀번호를 확인하세요."); // 제목
-		System.out.println("받는사람 = " + request.getParameter("to"));
-		System.out.println("비밀번호 = " + memberdto.getPassword());
 		
 		try {
 			// 메일전송 클래스 생성
@@ -58,8 +56,6 @@ public class ForgotPasswordController extends HttpServlet {
 		catch (Exception e) {
 			JSFunction.alertLocation(response, "이메일 전송에 실패했습니다. 다시 시도해주세요.", "../membership/forgotpassword.do");
 		}
-		
-		
 		
 	}
 }

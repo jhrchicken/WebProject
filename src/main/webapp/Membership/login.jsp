@@ -78,7 +78,7 @@
                                     </form>
                                     <hr>
                                     <div class="text-center">
-                                        <a class="small" href="../forgot-password.jsp">비밀번호 찾기</a>
+                                        <a class="small" href="../membership/forgotpassword.do">비밀번호 찾기</a>
                                     </div>
                                     <div class="text-center">
                                         <a class="small" href="../membership/register.do">회원가입</a>

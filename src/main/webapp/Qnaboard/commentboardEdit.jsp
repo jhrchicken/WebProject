@@ -223,7 +223,7 @@
 				<div class="container-fluid">
 
 					<!-- Page Heading -->
-					<p class="mb-4">질문게시판에 오신걸 환영합니다. 질문과 답변을 남겨보세요.</p><br/>
+					<p class="mb-4">Q&A 게시판에서는 댓글을 남길 수 있습니다. 질문과 답변을 남겨보세요.</p><br/>
 
 					<!-- DataTales Example -->
 					<div class="card shadow mb-4">
